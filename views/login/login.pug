@@ -1,0 +1,13 @@
+extends ../common/common
+
+block content
+	h1 Login
+	if error
+		.alert.alert-danger= error
+
+	form(method="POST")
+		label(for="username") Username
+		input.form-control(type="text" name="username" value=values ? values.name : "")
+		label(for="password") Password
+		input.form-control(type="password" name="password" value=values ? values.phone : "")
+		button.btn.btn-primary.mt-2 Login
